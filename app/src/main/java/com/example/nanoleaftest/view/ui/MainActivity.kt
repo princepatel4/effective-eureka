@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     //Setup live data observer
     private fun setObserver() {
         viewModel.averageOutOfSimulationLiveData.observe(this, Observer {averageOutput->
-            binding.textViewSimulationResult.text = averageOutput.toString()
+            binding.textViewSimulationResult.text = String.format("%.2f", averageOutput)
         })
     }
 
