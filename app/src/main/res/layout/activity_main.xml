@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ui.MainActivity">
+
+    <TextView
+        android:id="@+id/textViewLightBulbColorsLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:layout_marginEnd="@dimen/normal_margin"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/editTextLightBulbColors"
+        app:layout_constraintBottom_toBottomOf="@id/editTextLightBulbColors"
+        android:text="Light bulb colours"/>
+
+    <EditText
+        android:id="@+id/editTextLightBulbColors"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:layout_marginEnd="@dimen/normal_margin"
+        android:hint="Enter the number of light bulb colours"
+        app:layout_constraintLeft_toRightOf="@id/textViewLightBulbColorsLabel"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:inputType="number"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="textViewLightBulbColorsLabel,editTextLightBulbColors"
+        />
+    <TextView
+        android:id="@+id/textViewQuantityOfEachColorLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:layout_marginEnd="@dimen/normal_margin"
+        app:layout_constraintTop_toBottomOf="@id/barrier1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/editTextQuantityOfEachColor"
+        app:layout_constraintBottom_toBottomOf="@id/editTextQuantityOfEachColor"
+        android:text="Quantity of each light bulb colour"/>
+
+    <EditText
+        android:id="@+id/editTextQuantityOfEachColor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:layout_marginEnd="@dimen/normal_margin"
+        android:hint="Enter the quantity of each light bulb colour"
+        app:layout_constraintLeft_toRightOf="@id/textViewQuantityOfEachColorLabel"
+        app:layout_constraintTop_toBottomOf="@id/barrier1"
+        app:layout_constraintRight_toRightOf="parent"
+        android:inputType="number"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="textViewQuantityOfEachColorLabel,editTextQuantityOfEachColor"
+        />
+    <TextView
+        android:id="@+id/textViewNumberOfRandomlyPickLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:layout_marginEnd="@dimen/normal_margin"
+        app:layout_constraintTop_toBottomOf="@id/barrier2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/editTextNumberOfRandomlyPick"
+        app:layout_constraintBottom_toBottomOf="@id/editTextNumberOfRandomlyPick"
+        android:text="Number of lightbulbs to randomly pick"/>
+    <EditText
+        android:id="@+id/editTextNumberOfRandomlyPick"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:layout_marginEnd="@dimen/normal_margin"
+        android:hint="Enter number of lightbulbs to randomly pick"
+        app:layout_constraintLeft_toRightOf="@id/textViewNumberOfRandomlyPickLabel"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrier2"
+        android:inputType="number"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="textViewNumberOfRandomlyPickLabel,editTextNumberOfRandomlyPick"
+        />
+
+    <TextView
+        android:id="@+id/textViewNumberOfTimeSimulationRunLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:layout_marginEnd="@dimen/normal_margin"
+        app:layout_constraintTop_toBottomOf="@id/barrier3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/editTextNumberOfRandomlyPick"
+        app:layout_constraintBottom_toBottomOf="@id/editTextNumberOfTimeSimulationRun"
+        android:text="Number of times simulation run"/>
+    <EditText
+        android:id="@+id/editTextNumberOfTimeSimulationRun"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:layout_marginEnd="@dimen/normal_margin"
+        android:hint="Enter number of times simulation run"
+        app:layout_constraintLeft_toRightOf="@id/textViewNumberOfTimeSimulationRunLabel"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrier3"
+        android:inputType="number"/>
+
+    <Button
+        android:id="@+id/buttonRunSimulation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Run Simulation"
+        android:layout_marginTop="@dimen/normal_margin"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextNumberOfTimeSimulationRun"/>
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="buttonRunSimulation"
+        />
+    <TextView
+        android:id="@+id/textViewSimulationResultLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:layout_marginEnd="@dimen/normal_margin"
+        app:layout_constraintTop_toBottomOf="@id/barrier4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/textViewSimulationResult"
+        android:text="Average result of simulation"/>
+
+    <TextView
+        android:id="@+id/textViewSimulationResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:layout_marginEnd="@dimen/normal_margin"
+        app:layout_constraintTop_toBottomOf="@id/barrier4"
+        app:layout_constraintLeft_toRightOf="@id/textViewSimulationResultLabel"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
