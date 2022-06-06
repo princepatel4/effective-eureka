@@ -11,8 +11,8 @@ import org.junit.Assert.*
  * See [testing documentation](http://d.android.com/tools/testing).
  */
 class LightBulbUtilsTest{
-    var numberOfLightBulbColor : Int = 5
-    var numberOfEachBulbColor : Int = 100
+    private var numberOfLightBulbColor : Int = 5
+    private var numberOfEachBulbColor : Int = 100
 
     @Test
     fun totalNumberOfLightBulb() {
